@@ -7,7 +7,7 @@
 
 A robust machine learning system for predicting building heating and cooling loads with **quantifiable uncertainty intervals**. This tool provides a fast, accurate, and accessible alternative to expensive, complex energy simulation software for early-stage building design and energy planning.
 
-> **Key Achievement**: Developed a Gradient Boosting model that predicts power load with **99.97% accuracy (R²)** for heating and provides practical prediction intervals, achieving ~78% coverage of actual values.
+> **Key Achievement**: Developed a Gradient Boosting model that predicts power load with **99.79% accuracy (R²)** for Heating Load and **98.40% accuracy (R²)** for Cooling Load and provides practical prediction intervals, achieving ~78% coverage of actual values.
 
 ##  Table of Contents
 
@@ -23,7 +23,7 @@ A robust machine learning system for predicting building heating and cooling loa
 
 ##  Overview
 
-This project tackles the critical challenge of predicting energy demands (heating and cooling loads) for buildings. Traditional simulation tools (e.g., EnergyPlus) are complex and costly (>$5,000/year). This solution uses a **Gradient Boosting Regressor** trained on the [UCI Energy Efficiency Dataset](https://archive.ics.uci.edu/dataset/242/energy+efficiency) to provide instant, accurate predictions based on fundamental building design parameters.
+This project tackles the critical challenge of predicting energy demands (heating and cooling loads) for buildings. Traditional simulation tools are complex and costly (>$5,000/year). This solution uses a **Gradient Boosting Regressor** trained on the [UCI Energy Efficiency Dataset](https://archive.ics.uci.edu/dataset/242/energy+efficiency) to provide instant, accurate predictions based on fundamental building design parameters.
 
 The model's standout feature is its ability to generate **prediction intervals** (5th-95th percentile), offering a data-driven measure of uncertainty crucial for risk-aware engineering decisions.
 

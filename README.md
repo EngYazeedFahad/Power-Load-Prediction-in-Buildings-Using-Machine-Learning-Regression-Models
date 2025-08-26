@@ -16,7 +16,6 @@ A robust machine learning system for predicting building heating and cooling loa
 - [Project Architecture](#-project-architecture)
 - [Results & Performance](#-results--performance)
 - [GUI Demo](#-gui-demo)
-- [Installation](#-installation)
 - [Usage](#-usage)
 - [Limitations & Future Work](#-limitations--future-work)
 - [References](#-references)
@@ -33,7 +32,7 @@ The model's standout feature is its ability to generate **prediction intervals**
 - **High-Accuracy Predictions**: Achieves near-perfect R² scores of **0.9976** (Heating Load) and **0.9840** (Cooling Load).
 - **Uncertainty Quantification**: Provides a probable range for each forecast, not just a single point estimate.
 - **Robustness Tested**: Model performance degrades gracefully even with **20% noise** injected into input data.
-- **User-Friendly GUI**: Includes a PyQt graphical interface for easy input and instant results.
+- **User-Friendly GUI**: Includes graphical interface for easy input and instant results.
 - **Comprehensive Analysis**: Full pipeline including EDA, hyperparameter tuning, residual analysis, and robustness testing.
 
 ##  Project Architecture
@@ -43,10 +42,10 @@ The system is built with a clear machine learning pipeline:
 1.  **Data**: UCI Energy Efficiency Dataset (8 features, 768 samples).
 2.  **Preprocessing & EDA**: Handled missing values, analyzed correlations, and confirmed no outliers.
 3.  **Modeling**: A separate **Gradient Boosting Regressor** is trained for heating (Y1) and cooling (Y2) loads.
-4.  **Hyperparameter Tuning**: Optimized via `GridSearchCV` (Best params: `n_estimators=500`, `learning_rate=0.1`, `max_depth=3 or 5`).
+4.  **Hyperparameter Tuning**: Optimized via `GridSearchCV` (Best params: `n_estimators=500`, `learning_rate=0.1`, `max_depth=3 and 5`).
 5.  **Quantile Prediction**: Three models per target predict the **median (0.5), lower (0.05), and upper (0.95) quantiles** to form prediction intervals.
 6.  **Evaluation**: Assessed using R², MAE, MSE, and interval coverage.
-7.  **Deployment**: Results are showcased in a **PyQt GUI** for interactive use.
+7.  **Deployment**: Results are showcased in a **tkinter GUI** for interactive use.
 
 ## Results & Performance
 
@@ -65,36 +64,11 @@ The model successfully provides practical estimates of uncertainty:
 
 ## GUI Demo
 
-The project includes a functional GUI built with PyQt for easy interaction.
+The project includes a functional GUI built with tkinter for easy interaction.
 
 **Input:** Building parameters (Relative Compactness, Surface Area, Wall Area, etc.)
 **Output:** Instant prediction for heating or cooling load, including the median prediction and the prediction interval.
 
-![GUI Demo Screenshot](https://via.placeholder.com/600x400.png?text=GUI+Screenshot+Placeholder)
-*Example of the GUI predicting the heating load for a sample building.*
-
-## Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/EngYazeedFahad/Power-Load-Prediction-in-Buildings-Using-Machine-Learning-Regression-Models.git
-    cd Power-Load-Prediction-in-Buildings-Using-Machine-Learning-Regression-Models
-    ```
-
-2.  **Create and activate a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: `venv\Scripts\activate`
-    ```
-
-3.  **Install required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *If `requirements.txt` is not present, install core libraries:*
-    ```bash
-    pip install numpy pandas scikit-learn matplotlib seaborn scipy statsmodels PyQt5
-    ```
 
 ## Usage
 

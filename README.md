@@ -17,9 +17,6 @@ A robust machine learning system for predicting building heating and cooling loa
 - [Results & Performance](#-results--performance)
 - [GUI Demo](#-gui-demo)
 - [Usage](#-usage)
-- [Limitations & Future Work](#-limitations--future-work)
-- [References](#-references)
-- [Author & License](#-author--license)
 
 ##  Overview
 
